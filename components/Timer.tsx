@@ -14,7 +14,12 @@ const Timer = (props: Props) => {
 
   useEffect(() => {
     // const target = new Date("12/31/2023 23:59:59");
-    const target = new Date("04/15/2023 23:59:59");
+    const actualDay = new Date().getDate();
+    const actualMonth = new Date().getMonth();
+    const actualYear = new Date().getFullYear();
+    let fechaFuturo = new Date(actualYear, actualMonth, actualDay + 10);
+    console.log(fechaFuturo);
+    const target = new Date(fechaFuturo);
     const interval: NodeJS.Timer = setInterval(() => {
       const now = new Date();
       const difference = target.getTime() - now.getTime();
@@ -45,8 +50,8 @@ const Timer = (props: Props) => {
           </h1>
           <div className="mx-auto mb-[80%] flex gap-x-5 md:mb-80">
             <div className="flex flex-col items-center justify-self-center">
-              <div className=" mb-4 h-16 w-16 justify-center items-center flex rounded-lg bg-DarkDesaturatedDlue shadow-veryDarkBlueBlack md:h-24  md:w-24 ">
-                <span className="text-4xl block font-bold text-softRed  md:text-6xl">
+              <div className=" mb-4 flex h-16 w-16 items-center justify-center rounded-lg bg-DarkDesaturatedDlue shadow-veryDarkBlueBlack md:h-24  md:w-24 ">
+                <span className="block text-4xl font-bold text-softRed  md:text-6xl">
                   {days < 10 ? `0${days}` : `${days}`}
                 </span>
               </div>
@@ -55,8 +60,8 @@ const Timer = (props: Props) => {
               </span>
             </div>
             <div className="flex flex-col items-center justify-self-center">
-              <div className=" mb-4 h-16 w-16 justify-center items-center flex rounded-lg bg-DarkDesaturatedDlue shadow-veryDarkBlueBlack md:h-24  md:w-24 ">
-                <span className="text-4xl block font-bold text-softRed  md:text-6xl">
+              <div className=" mb-4 flex h-16 w-16 items-center justify-center rounded-lg bg-DarkDesaturatedDlue shadow-veryDarkBlueBlack md:h-24  md:w-24 ">
+                <span className="block text-4xl font-bold text-softRed  md:text-6xl">
                   {hours < 10 ? `0${hours}` : `${hours}`}
                 </span>
               </div>
@@ -65,8 +70,8 @@ const Timer = (props: Props) => {
               </span>
             </div>
             <div className="flex flex-col items-center justify-self-center">
-              <div className=" mb-4 h-16 w-16 justify-center items-center flex rounded-lg bg-DarkDesaturatedDlue shadow-veryDarkBlueBlack md:h-24  md:w-24 ">
-                <span className="text-4xl block font-bold text-softRed  md:text-6xl">
+              <div className=" mb-4 flex h-16 w-16 items-center justify-center rounded-lg bg-DarkDesaturatedDlue shadow-veryDarkBlueBlack md:h-24  md:w-24 ">
+                <span className="block text-4xl font-bold text-softRed  md:text-6xl">
                   {minutes < 10 ? `0${minutes}` : `${minutes}`}
                 </span>
               </div>
@@ -75,8 +80,8 @@ const Timer = (props: Props) => {
               </span>
             </div>
             <div className="flex flex-col items-center justify-self-center">
-              <div className=" mb-4 h-16 w-16 justify-center items-center flex rounded-lg bg-DarkDesaturatedDlue shadow-veryDarkBlueBlack md:h-24  md:w-24 ">
-                <span className="text-4xl block font-bold text-softRed  md:text-6xl">
+              <div className=" mb-4 flex h-16 w-16 items-center justify-center rounded-lg bg-DarkDesaturatedDlue shadow-veryDarkBlueBlack md:h-24  md:w-24 ">
+                <span className="block text-4xl font-bold text-softRed  md:text-6xl">
                   {seconds < 10 ? `0${seconds}` : `${seconds}`}
                 </span>
               </div>
