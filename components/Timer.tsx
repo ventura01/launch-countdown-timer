@@ -53,8 +53,8 @@ const Timer = (props: Props) => {
               <div className=" relative mb-4 flex h-16 w-16 items-center justify-center overflow-hidden rounded-lg bg-DarkDesaturatedDlue shadow-veryDarkBlueBlack md:h-24  md:w-24 ">
                 <div className="absolute top-1/2 h-[.25rem] w-full bg-black opacity-10"></div>
                 <div className="-top-1 opacity-80">
-                  <div className="absolute -left-1 h-1  w-1 rounded-full bg-veryDarkBlueBlack md:h-2 md:w-2"></div>
-                  <div className="absolute -right-1 h-1  w-1 rounded-full bg-veryDarkBlueBlack md:h-2 md:w-2"></div>
+                  <div className="absolute -left-1 h-2 top-1/2 w-2 rounded-full bg-veryDarkBlueBlack "></div>
+                  <div className="absolute -right-1 h-2 top-1/2 w-2 rounded-full bg-veryDarkBlueBlack "></div>
                 </div>
                 <span className="block text-4xl font-bold text-softRed  md:text-6xl">
                   {days < 10 ? `0${days}` : `${days}`}
@@ -68,8 +68,8 @@ const Timer = (props: Props) => {
               <div className="overflow-hidden relative mb-4 flex h-16 w-16 items-center justify-center rounded-lg bg-DarkDesaturatedDlue shadow-veryDarkBlueBlack md:h-24  md:w-24 ">
                 <div className="absolute top-1/2 h-[.25rem] w-full bg-black opacity-10"></div>
                 <div className="-top-1 opacity-80">
-                  <div className="absolute -left-1 h-1  w-1 rounded-full bg-veryDarkBlueBlack md:h-2 md:w-2"></div>
-                  <div className="absolute -right-1 h-1  w-1 rounded-full bg-veryDarkBlueBlack md:h-2 md:w-2"></div>
+                  <div className="absolute -left-1 h-2 top-1/2 w-2 rounded-full bg-veryDarkBlueBlack "></div>
+                  <div className="absolute -right-1 h-2 top-1/2 w-2 rounded-full bg-veryDarkBlueBlack "></div>
                 </div>
                 <span className="block text-4xl font-bold text-softRed  md:text-6xl">
                   {hours < 10 ? `0${hours}` : `${hours}`}
@@ -83,8 +83,8 @@ const Timer = (props: Props) => {
               <div className="overflow-hidden relative mb-4 flex h-16 w-16 items-center justify-center rounded-lg bg-DarkDesaturatedDlue shadow-veryDarkBlueBlack md:h-24  md:w-24 ">
                 <div className="absolute top-1/2 h-[.25rem] w-full bg-black opacity-10"></div>
                 <div className="-top-1 opacity-80">
-                  <div className="absolute -left-1 h-1  w-1 rounded-full bg-veryDarkBlueBlack md:h-2 md:w-2"></div>
-                  <div className="absolute -right-1 h-1  w-1 rounded-full bg-veryDarkBlueBlack md:h-2 md:w-2"></div>
+                  <div className="absolute -left-1 h-2 top-1/2 w-2 rounded-full bg-veryDarkBlueBlack "></div>
+                  <div className="absolute -right-1 h-2 top-1/2 w-2 rounded-full bg-veryDarkBlueBlack "></div>
                 </div>
                 <span className="block text-4xl font-bold text-softRed  md:text-6xl">
                   {minutes < 10 ? `0${minutes}` : `${minutes}`}
@@ -98,8 +98,8 @@ const Timer = (props: Props) => {
               <div className="overflow-hidden relative mb-4 flex h-16 w-16 items-center justify-center rounded-lg bg-DarkDesaturatedDlue shadow-veryDarkBlueBlack md:h-24  md:w-24 ">
                 <div className="absolute top-1/2 h-[.25rem] w-full bg-black opacity-10"></div>
                 <div className="-top-1 opacity-80">
-                  <div className="absolute -left-1 h-1  w-1 rounded-full bg-veryDarkBlueBlack md:h-2 md:w-2"></div>
-                  <div className="absolute -right-1 h-1  w-1 rounded-full bg-veryDarkBlueBlack md:h-2 md:w-2"></div>
+                  <div className="absolute -left-1 h-2 top-1/2 w-2 rounded-full bg-veryDarkBlueBlack "></div>
+                  <div className="absolute -right-1 h-2 top-1/2 w-2 rounded-full bg-veryDarkBlueBlack "></div>
                 </div>
                 <span className="block text-4xl font-bold text-softRed  md:text-6xl">
                   {seconds < 10 ? `0${seconds}` : `${seconds}`}
@@ -122,6 +122,7 @@ const Timer = (props: Props) => {
           width={1400}
           height={800}
           className="absolute top-0 object-cover object-center"
+          
         />
         <Image
           src="/images/pattern-hills.svg"
